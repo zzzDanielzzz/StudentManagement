@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "8dcc3b28-4fa5-4e6c-b620-3c64fb6ca257",
+		"name": "Student Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37637382"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register teacher",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Matias",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "matias",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "MatiasChun10#",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/compu/OneDrive/Documentos/Daniel Sacol/Recursos de Video/1366_2000.jpg"
+								},
+								{
+									"key": "phone",
+									"value": "33815217",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "chun",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "matias@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/auth/registerTeacher",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"auth",
+								"registerTeacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register student",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Miguel",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "mg",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Miguelito10#",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/compu/OneDrive/Imágenes/g.jpg"
+								},
+								{
+									"key": "phone",
+									"value": "33815217",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Gutierrez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "miguel@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/auth/registerStudent",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"auth",
+								"registerStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dsacol@email.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "create course",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Matematica aplicada\",\r\n    \"description\": \"Curso de matematica aplicada basica\",\r\n    \"teacher\": \"67a7ff13a4a9804fb01f4aba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/course/createCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"course",
+								"createCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Estadistica 1\",\r\n    \"description\": \"Estadistica basica 1 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/course/updateCourse/67a80f8fa9458444b665cf52",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"course",
+								"updateCourse",
+								"67a80f8fa9458444b665cf52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get teacher courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/teacherCourses/67a7ff13a4a9804fb01f4aba",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"teacherCourses",
+								"67a7ff13a4a9804fb01f4aba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/course/deleteCourse/67a803eaa4a9804fb01f4acf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"course",
+								"deleteCourse",
+								"67a803eaa4a9804fb01f4acf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "enroll course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courseId\": \"67a8115ba9458444b665cf70\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/enroll/67a7ff08a4a9804fb01f4ab6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"enroll",
+								"67a7ff08a4a9804fb01f4ab6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view student enroll courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/courses/67a7ff08a4a9804fb01f4ab6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"courses",
+								"67a7ff08a4a9804fb01f4ab6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Daniel\",\r\n    \"surname\": \"Sacol\",\r\n    \"userName\": \"dsacolc\",\r\n    \"email\": \"dsacol@email.com\",\r\n    \"phone\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/updateProfile/67a7ff08a4a9804fb01f4ab6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"updateProfile",
+								"67a7ff08a4a9804fb01f4ab6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/deleteUser/67a80eb8a9458444b665cf4b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"deleteUser",
+								"67a80eb8a9458444b665cf4b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/findUser/67a7ff08a4a9804fb01f4ab6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"findUser",
+								"67a7ff08a4a9804fb01f4ab6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/studentManagement/v1/user/updatePassword/67a7ff08a4a9804fb01f4ab6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"studentManagement",
+								"v1",
+								"user",
+								"updatePassword",
+								"67a7ff08a4a9804fb01f4ab6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
