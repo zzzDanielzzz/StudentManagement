@@ -12,7 +12,25 @@ Esta API proporciona funcionalidades esenciales para la gestión de una aplicaci
 - **Mongoose**
 
 ---
+## 📦 Instalación
 
+1. Clona el repositorio:
+
+```CMD
+git clone https://github.com/zzzDanielzzz/StudentManagement.git
+```
+
+2. Instalar las dependencias:
+
+```CMD
+npm install
+```
+
+3. Iniciar el servidor:
+
+```CMD
+npm run dev
+---
 ## 📑 Endpoints Disponibles
 
 ### 🔐 Autenticación
