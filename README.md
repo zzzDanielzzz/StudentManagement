@@ -30,7 +30,9 @@ npm install
 
 ```CMD
 npm run dev
+```
 ---
+
 ## 📑 Endpoints Disponibles
 
 ### 🔐 Autenticación
