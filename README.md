@@ -34,7 +34,7 @@ npm run dev
 ---
 
 ## 📑 Endpoints Disponibles
-
+*Recuerda que puedes acceder a la colección de endpoints cargada en el proyecto*
 ### 🔐 Autenticación
 
 #### **Registrar Estudiante**
